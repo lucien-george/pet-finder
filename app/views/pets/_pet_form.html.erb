@@ -1,0 +1,10 @@
+
+<%= simple_form_for pet do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :content %>
+  <%= f.input :species, as: :select, collection: Pet::SPECIES %>
+  <%= f.input :found %>
+  <%= f.input :found_on %>
+  <%= f.submit %>
+<% end %>

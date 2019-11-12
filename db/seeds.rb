@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+50.times do
+  Pet.create(
+    name: Faker::Name.name,
+    address: Faker::Address.city,
+    found_on: ((Date.new(2019, 9, 1))..(Date.today)).to_a.sample,
+    species: Pet::SPECIES.sample
+  )
+end
